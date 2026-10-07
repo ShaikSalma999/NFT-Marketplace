@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+html { background: #100d2a; }
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #100d2a;
+  color: #fff;
+  font-family: Poppins, sans-serif;
+}
+button, input { font: inherit; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: #302b55; border-radius: 20px; }
+::selection { background: #7048f4; color: #fff; }
+
+@layer components {
+  .surface { @apply bg-panel rounded-[18px]; }
+  .purple-btn { @apply bg-purple hover:bg-[#805cf6] active:scale-[.98] transition rounded-[9px] font-semibold; }
+  .red-btn { @apply bg-red hover:bg-[#f0445b] active:scale-[.98] transition rounded-[9px] font-semibold; }
+  .page-title { @apply text-[22px] md:text-[24px] font-semibold leading-tight; }
+  .muted { @apply text-[#7e7a9f]; }
+}
